@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   body{
+    background: teal;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    margin: auto;
+    margin-top: 50px;
+   }
+
+   button{
+       font-size: 40px;
+       padding: 10px;
+   }
+</style>
+
+</head>
+<body>
+    <button id="printPigs">Print Pigs are the Best!</button>
+
+<script>
+    var printPigs = document.querySelector("#printPigs")
+    printPigs.onclick = addTextToPage
+
+
+    function addTextToPage(){
+        var newElement = document.createElement("h1")  //create element
+        var newText = document.createTextNode("Pigs are the Best!")  //create text
+        newElement.appendChild(newText)  //add text to element
+        document.body.appendChild(newElement)  //add element to body
+    }       
+</script>
+
+
+
+
+
+</body>
+</html>
